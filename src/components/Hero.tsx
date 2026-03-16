@@ -43,7 +43,7 @@ export function Hero() {
             variant="outline"
             className="reveal mb-8 h-auto gap-2.5 rounded-full px-4 py-1.5 text-xs font-medium tracking-widest uppercase text-white/60 backdrop-blur-md [background:rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] hover:[background:rgba(255,255,255,0.07)]"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-300/70" />
+            <span className="h-1.5 w-1.5 rounded-full bg-primary/70" />
             Full-Stack Developer
           </Badge>
 
