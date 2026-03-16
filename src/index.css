@@ -37,6 +37,17 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Reflect design tokens */
+  --glow-primary: oklch(0.546 0.245 262.881);
+  --glow-secondary: oklch(0.424 0.199 265.638);
+  --glass-fill: rgba(255, 255, 255, 0.05);
+  --glass-fill-hover: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-hover: rgba(255, 255, 255, 0.14);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.24);
+  --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.40);
+  --shadow-float: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
 
 @theme inline {
@@ -72,6 +83,7 @@
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --radius: 1rem;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -87,8 +99,114 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Gradient mesh — the light source for all glass surfaces */
+    background-image:
+      radial-gradient(ellipse 80% 60% at 20% 10%, oklch(0.546 0.245 262.881 / 12%) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, oklch(0.424 0.199 265.638 / 10%) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 60% 30%, oklch(0.623 0.214 259.815 / 6%) 0%, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100dvh;
   }
   html {
     @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
+
+/* ── Glassmorphism ─────────────────────────────────────── */
+@layer utilities {
+  .glass {
+    background: var(--glass-fill);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    transition: background 200ms ease-out, border-color 200ms ease-out;
+  }
+  .glass:hover {
+    background: var(--glass-fill-hover);
+    border-color: var(--glass-border-hover);
+  }
+
+  /* z-axis vocabulary */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-card);
+  }
+  .glass-overlay {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--glass-border-hover);
+    box-shadow: var(--shadow-modal);
+  }
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(32px) saturate(200%);
+    -webkit-backdrop-filter: blur(32px) saturate(200%);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  /* ── Ambient glow ──────────────────────────────────────── */
+  .glow {
+    position: relative;
+  }
+  .glow::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(ellipse at center, var(--glow-primary) 0%, transparent 70%);
+    opacity: 0.15;
+    z-index: -1;
+    filter: blur(40px);
+    pointer-events: none;
+  }
+  .glow-strong::before {
+    opacity: 0.25;
+    inset: -60px;
+  }
+
+  /* ── Depth shadows ─────────────────────────────────────── */
+  .shadow-card  { box-shadow: var(--shadow-card); }
+  .shadow-modal { box-shadow: var(--shadow-modal); }
+  .shadow-float { box-shadow: var(--shadow-float); }
+}
+
+/* ── Scroll-reveal animations ──────────────────────────── */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: reveal-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-fade.is-visible {
+  animation: reveal-fade 0.4s ease-out forwards;
+}
+
+/* Stagger siblings: apply data-reveal-delay="1..6" */
+[data-reveal-delay="1"].is-visible { animation-delay: 60ms; }
+[data-reveal-delay="2"].is-visible { animation-delay: 120ms; }
+[data-reveal-delay="3"].is-visible { animation-delay: 180ms; }
+[data-reveal-delay="4"].is-visible { animation-delay: 240ms; }
+[data-reveal-delay="5"].is-visible { animation-delay: 300ms; }
+[data-reveal-delay="6"].is-visible { animation-delay: 360ms; }
