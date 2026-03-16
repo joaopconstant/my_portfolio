@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react"
-import { useScrollReveal } from "@/lib/hooks"
-import { useRef } from "react"
+import { useScrollReveal, useTiltCard } from "@/lib/hooks"
 
 const stack = [
   "React",
@@ -13,50 +12,7 @@ const stack = [
 ]
 
 function TiltCard({ children }: { children: React.ReactNode }) {
-  const cardRef = useRef<HTMLDivElement>(null)
-  const glareRef = useRef<HTMLDivElement>(null)
-  const rafRef = useRef<number>(0)
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = cardRef.current
-    const glare = glareRef.current
-    if (!card || !glare) return
-
-    cancelAnimationFrame(rafRef.current)
-    rafRef.current = requestAnimationFrame(() => {
-      const rect = card.getBoundingClientRect()
-      const x = (e.clientX - rect.left) / rect.width // 0–1
-      const y = (e.clientY - rect.top) / rect.height // 0–1
-
-      const rotateX = (y - 0.5) * -14
-      const rotateY = (x - 0.5) * 14
-
-      card.style.transition = "box-shadow 200ms ease-out"
-      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`
-      card.style.boxShadow = `
-        0 24px 60px rgba(0,0,0,0.40),
-        0 0 0 1px rgba(255,255,255,0.10),
-        inset 0 1px 0 rgba(255,255,255,0.12)
-      `
-
-      glare.style.opacity = "1"
-      glare.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(255,255,255,0.05) 0%, transparent 65%)`
-    })
-  }
-
-  const handleMouseLeave = () => {
-    const card = cardRef.current
-    const glare = glareRef.current
-    cancelAnimationFrame(rafRef.current)
-    if (!card || !glare) return
-
-    card.style.transition =
-      "transform 400ms cubic-bezier(0.22,1,0.36,1), box-shadow 400ms ease-out"
-    card.style.transform =
-      "perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)"
-    card.style.boxShadow = "0 8px 32px rgba(0,0,0,0.24)"
-    glare.style.opacity = "0"
-  }
+  const { cardRef, glareRef, handleMouseMove, handleMouseLeave } = useTiltCard()
 
   return (
     <div
@@ -123,8 +79,11 @@ export function About() {
   const addRef = useScrollReveal(0.08)
 
   return (
-    <section id="about" className="relative py-32">
-      <div className="mx-auto w-full max-w-6xl px-8">
+    <section id="about" className="relative h-screen overflow-hidden py-40">
+      {/* Subtle dark scrim for readability */}
+      <div className="pointer-events-none absolute inset-0 bg-black/30" />
+
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-8">
         {/* Heading */}
         <h2
           ref={addRef(1)}
@@ -168,7 +127,6 @@ export function About() {
                 code used by real users.
               </p>
             </div>
-
           </div>
 
           {/* Right: Tilt card */}
