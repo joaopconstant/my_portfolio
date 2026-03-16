@@ -21,7 +21,7 @@ export function Contact() {
       <div className="relative mx-auto max-w-2xl text-center">
         {/* Heading */}
         <h2
-          ref={addRef(1)}
+          ref={addRef(0)}
           className="reveal mb-6 text-white"
           data-reveal-delay="1"
           style={{
@@ -33,12 +33,12 @@ export function Contact() {
         >
           Let's build something
           <br />
-          <span className="text-blue-700">meaningful.</span>
+          <span className="text-chart-3">meaningful.</span>
         </h2>
 
         {/* Subtext */}
         <p
-          ref={addRef(2)}
+          ref={addRef(1)}
           className="reveal mb-12 text-base leading-relaxed text-white/40"
           data-reveal-delay="2"
         >
@@ -48,7 +48,7 @@ export function Contact() {
 
         {/* CTA card */}
         <div
-          ref={addRef(3)}
+          ref={addRef(2)}
           className="reveal glass-card rounded-2xl p-8"
           data-reveal-delay="3"
         >

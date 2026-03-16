@@ -33,7 +33,7 @@ export function Hero() {
       {/* Edge vignette — top */}
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/15 to-transparent" />
       {/* Bottom fade — merge into page background */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-48 bg-linear-to-t from-[oklch(0.145_0_0)] to-transparent" />
+      <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-48 bg-linear-to-t from-[oklch(0.145_0_0)] to-transparent" />
       {/* Hero content */}
       <div className="pointer-events-none relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-6xl px-8">
@@ -41,7 +41,7 @@ export function Hero() {
           <Badge
             ref={addRef(0)}
             variant="outline"
-            className="reveal mb-8 h-auto gap-2.5 rounded-full px-4 py-1.5 text-xs font-medium tracking-widest uppercase text-white/60 backdrop-blur-md [background:rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] hover:[background:rgba(255,255,255,0.07)]"
+            className="reveal mb-8 h-auto gap-2.5 rounded-full border-[rgba(255,255,255,0.12)] px-4 py-1.5 text-xs font-medium tracking-widest text-white/60 uppercase backdrop-blur-md [background:rgba(255,255,255,0.07)] hover:[background:rgba(255,255,255,0.07)]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary/70" />
             Full-Stack Developer
@@ -68,7 +68,8 @@ export function Hero() {
             className="reveal mb-10 max-w-sm text-lg leading-relaxed text-white/45"
             data-reveal-delay="2"
           >
-            I design and build full-stack web applications from pixel-precise interfaces to robust backend systems.
+            I design and build full-stack web applications from pixel-precise
+            interfaces to robust backend systems.
           </p>
 
           {/* CTAs */}
@@ -81,7 +82,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               asChild
-              className="h-11 rounded-full px-6 text-white backdrop-blur-md [background:rgba(255,255,255,0.10)] border-[rgba(255,255,255,0.14)] hover:[background:rgba(255,255,255,0.16)] hover:text-white"
+              className="h-11 rounded-full border-[rgba(255,255,255,0.14)] px-6 text-white backdrop-blur-md [background:rgba(255,255,255,0.10)] hover:text-white hover:[background:rgba(255,255,255,0.16)]"
             >
               <a href="#work">View Work</a>
             </Button>
