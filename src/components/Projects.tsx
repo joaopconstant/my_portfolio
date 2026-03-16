@@ -35,9 +35,8 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   const { cardRef, glareRef, handleMouseMove, handleMouseLeave } = useTiltCard({
     intensity: 10,
     scale: 1.015,
-    hoverShadow:
-      "0 24px 60px rgba(0,0,0,0.50), 0 0 0 1px rgba(255,255,255,0.12), inset 0 1px 0 rgba(255,255,255,0.10)",
-    resetShadow: "0 8px 40px rgba(0,0,0,0.35)",
+    hoverShadow: "0 24px 60px rgba(0,0,0,0.50)",
+    resetShadow: "0 8px 32px rgba(0,0,0,0.24)",
   })
 
   return (
@@ -47,18 +46,16 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       onMouseLeave={handleMouseLeave}
       style={{
         borderRadius: "16px",
-        background: "rgba(255,255,255,0.05)",
-        backdropFilter: "blur(14px) saturate(160%)",
-        WebkitBackdropFilter: "blur(14px) saturate(160%)",
-        border: "1px solid rgba(255,255,255,0.10)",
-        boxShadow: "0 8px 40px rgba(0,0,0,0.35)",
-        transformStyle: "preserve-3d",
+        background: "rgba(255,255,255,0.07)",
+        border: "1px solid rgba(255,255,255,0.09)",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.24)",
         willChange: "transform",
         position: "relative",
         overflow: "hidden",
         cursor: "default",
         display: "flex",
         flexDirection: "column",
+        height: "100%",
       }}
     >
       {/* Glare overlay */}
@@ -74,18 +71,8 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           zIndex: 1,
         }}
       />
+      <div style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", height: "100%" }} className="p-7">
 
-      {/* Content */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
-        }}
-        className="p-7"
-      >
         {/* Year */}
         <p className="mb-4 text-xs font-medium tracking-widest text-white/25 uppercase">
           {project.year}
@@ -182,7 +169,7 @@ export function Projects() {
             <div
               key={project.title}
               ref={addRef(i + 1)}
-              className="reveal"
+              className="reveal h-full"
               data-reveal-delay={String(i + 1)}
             >
               <ProjectCard project={project} />
