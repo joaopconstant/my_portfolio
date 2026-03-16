@@ -101,9 +101,9 @@
     @apply bg-background text-foreground;
     /* Gradient mesh — the light source for all glass surfaces */
     background-image:
-      radial-gradient(ellipse 80% 60% at 20% 10%, oklch(0.546 0.245 262.881 / 5%) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 80% 80%, oklch(0.424 0.199 265.638 / 4%) 0%, transparent 55%),
-      radial-gradient(ellipse 40% 40% at 60% 30%, oklch(0.623 0.214 259.815 / 3%) 0%, transparent 50%);
+      radial-gradient(ellipse 80% 60% at 50% 50%, oklch(0.546 0.245 262.881 / 5%) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 85% 85%, oklch(0.424 0.199 265.638 / 4%) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 65% 65%, oklch(0.623 0.214 259.815 / 3%) 0%, transparent 50%);
     background-attachment: fixed;
     min-height: 100dvh;
   }

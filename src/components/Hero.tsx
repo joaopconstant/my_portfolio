@@ -1,30 +1,10 @@
-import { useEffect, useRef } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import GradientBlinds from "./GradientBlinds"
+import { useScrollReveal } from "@/lib/hooks"
 
 export function Hero() {
-  const revealRefs = useRef<HTMLElement[]>([])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible")
-          }
-        })
-      },
-      { threshold: 0.05 }
-    )
-
-    revealRefs.current.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
-
-  const addRef = (index: number) => (el: HTMLElement | null) => {
-    if (el) revealRefs.current[index] = el
-  }
+  const addRef = useScrollReveal(0.05)
 
   return (
     <section className="relative h-screen overflow-hidden">
