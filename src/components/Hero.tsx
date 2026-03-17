@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import GradientBlinds from "./GradientBlinds"
+import GradientBlinds from "./background/GradientBlinds"
 import { useScrollReveal } from "@/lib/hooks"
 
 export function Hero() {
@@ -68,8 +68,8 @@ export function Hero() {
             className="reveal mb-10 max-w-sm text-lg leading-relaxed text-white/45"
             data-reveal-delay="2"
           >
-            I design and build full-stack web applications from pixel-precise
-            interfaces to robust backend systems.
+            I design and build modern web interfaces, from pixel-precise UI to
+            scalable front-end architecture.
           </p>
 
           {/* CTAs */}
