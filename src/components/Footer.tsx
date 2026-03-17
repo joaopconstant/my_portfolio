@@ -36,7 +36,7 @@ export function Footer() {
         className="pointer-events-none absolute top-0 right-0 left-0 h-24"
         style={{
           background:
-            "linear-gradient(to bottom,  0%, transparent 100%)",
+            "linear-gradient(to bottom, oklch(0.546 0.245 262.881 / 12%) 0%, transparent 40%)",
         }}
       />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between">

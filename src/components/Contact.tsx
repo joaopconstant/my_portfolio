@@ -53,7 +53,7 @@ export function Contact() {
         >
           Let's build something
           <br />
-          <span className="text-chart-3">meaningful.</span>
+          <span className="text-blue-700">beautiful.</span>
         </h2>
 
         {/* Subtext */}

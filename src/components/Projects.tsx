@@ -6,28 +6,28 @@ import { useScrollReveal, useTiltCard } from "@/lib/hooks"
 
 const projects = [
   {
-    title: "Finance Dashboard",
+    title: "Budget Manager",
     description:
-      "Real-time analytics dashboard for personal finance tracking focused on fast data visualization and responsive UI.",
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    href: "#",
-    year: "2024",
+      "A personal finance management system featuring real-time income and expense tracking with automated reporting via Google Sheets integration.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Sheets2Api"],
+    href: "https://budget-manager-coral.vercel.app",
+    year: "2025",
   },
   {
-    title: "E-commerce Platform",
+    title: "MRX Rodas e Rodízios",
     description:
-      "Full-stack commerce platform with server-rendered storefront, Stripe payments, and an internal admin interface.",
-    tags: ["Next.js", "Prisma", "Stripe", "Tailwind"],
-    href: "#",
-    year: "2024",
+      "A high-performance institutional website for an industrial supplier, featuring a comprehensive product catalog and optimized lead generation.",
+    tags: ["Vite", "TypeScript", "Tailwind"],
+    href: "https://mrxrodaserodizios.com.br/",
+    year: "2025",
   },
   {
-    title: "DevOps Monitor",
+    title: "Hoodlife",
     description:
-      "Internal tool for CI/CD pipeline monitoring that aggregates build metrics and surfaces failures in real time.",
-    tags: ["React", "REST API", "Docker", "TypeScript"],
-    href: "#",
-    year: "2023",
+      "A premium institutional platform for an exclusive gaming community, featuring high-performance visuals and seamless social integration.",
+    tags: ["Vite", "TypeScript", "Tailwind"],
+    href: "https://hoodlife.com.br/",
+    year: "2024",
   },
 ]
 
@@ -71,8 +71,16 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           zIndex: 1,
         }}
       />
-      <div style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", height: "100%" }} className="p-7">
-
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+        }}
+        className="p-7"
+      >
         {/* Year */}
         <p className="mb-4 text-xs font-medium tracking-widest text-white/25 uppercase">
           {project.year}
