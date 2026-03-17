@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Finance Dashboard",
     description:
-      "A real-time analytics platform for personal finance tracking — built with event-driven architecture and sub-100ms query times.",
+      "Real-time analytics dashboard for personal finance tracking focused on fast data visualization and responsive UI.",
     tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
     href: "#",
     year: "2024",
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description:
-      "Full-stack commerce solution with server-side rendering, Stripe integration, and an admin panel for inventory management.",
+      "Full-stack commerce platform with server-rendered storefront, Stripe payments, and an internal admin interface.",
     tags: ["Next.js", "Prisma", "Stripe", "Tailwind"],
     href: "#",
     year: "2024",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "DevOps Monitor",
     description:
-      "Internal tooling for CI/CD pipeline observability — aggregates build metrics, surfaces regressions, and alerts on anomalies.",
+      "Internal tool for CI/CD pipeline monitoring that aggregates build metrics and surfaces failures in real time.",
     tags: ["React", "REST API", "Docker", "TypeScript"],
     href: "#",
     year: "2023",

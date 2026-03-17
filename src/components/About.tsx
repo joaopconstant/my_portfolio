@@ -110,10 +110,8 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="2"
               >
-                I’m a full-stack engineer focused on building clean, reliable
-                web applications. With 2+ years working in the React ecosystem,
-                I specialize in turning complex requirements into clear,
-                well-structured user experiences.
+                I’m a front-end engineer with 2+ years of experience building
+                production web applications with React, Next.js and TypeScript.
               </p>
 
               <p
@@ -121,10 +119,19 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="3"
               >
-                My work combines solid experience with TypeScript, Node.js, and
-                modern front-end architecture. I enjoy taking features
-                end-to-end, from initial implementation to shipping production
-                code used by real users.
+                I focus on creating clean, reliable interfaces that translate
+                complex product requirements into clear user experiences.
+              </p>
+
+              <p
+                ref={addRef(4)}
+                className="reveal text-lg leading-relaxed text-white/50"
+                data-reveal-delay="4"
+              >
+                While my main work is on the front end, I regularly collaborate
+                with back-end engineers and work with APIs, Node.js services,
+                and application data flows to deliver complete features to
+                production.
               </p>
             </div>
           </div>
@@ -145,7 +152,8 @@ export function About() {
                     2+ Years
                   </p>
                   <p className="mt-0.5 text-sm text-white/35">
-                    Production Experience
+                    Building and shipping production web applications used by
+                    real users.
                   </p>
                 </div>
 

@@ -34,7 +34,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl items-center justify-between">
         {/* Left — name + copyright */}
         <p className="text-sm text-white/25">
-          © {new Date().getFullYear()} Scott Constant
+          © {new Date().getFullYear()} Constant
         </p>
 
         {/* Right — social links */}

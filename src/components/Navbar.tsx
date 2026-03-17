@@ -62,7 +62,7 @@ export function Navbar() {
           asChild
           className="h-8 rounded-full border-[rgba(255,255,255,0.14)] px-4 text-sm font-medium text-white backdrop-blur-md [background:rgba(255,255,255,0.10)] hover:text-white hover:[background:rgba(255,255,255,0.18)]"
         >
-          <a href="#contact">Hire Me</a>
+          <a href="mailto:joaoconstantdev@gmail.com">Hire Me</a>
         </Button>
       </nav>
     </header>
