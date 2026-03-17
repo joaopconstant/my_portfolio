@@ -121,7 +121,7 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="2"
               >
-                I’m a front-end engineer from Brazil with 2+ years of experience building
+                Hi, my name is João Constant. I’m a front-end engineer from Brazil with 2+ years of experience building
                 production web applications with React, Next.js and TypeScript.
               </p>
 
