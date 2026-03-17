@@ -27,7 +27,7 @@ const projects = [
       "A premium institutional platform for an exclusive gaming community, featuring high-performance visuals and seamless social integration.",
     tags: ["Vite", "TypeScript", "Tailwind"],
     href: "https://hoodlife.com.br/",
-    year: "2024",
+    year: "2026",
   },
 ]
 
