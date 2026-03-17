@@ -30,8 +30,16 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[rgba(255,255,255,0.06)] px-8 py-10">
-      <div className="mx-auto flex max-w-6xl items-center justify-between">
+    <footer className="relative px-8 py-10">
+      {/* Blue ambient bleed from Contact section */}
+      <div
+        className="pointer-events-none absolute top-0 right-0 left-0 h-24"
+        style={{
+          background:
+            "linear-gradient(to bottom,  0%, transparent 100%)",
+        }}
+      />
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between">
         {/* Left — name + copyright */}
         <p className="text-sm text-white/25">
           © {new Date().getFullYear()} Constant

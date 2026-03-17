@@ -80,9 +80,20 @@ export function About() {
 
   return (
     <section id="about" className="relative h-screen overflow-hidden py-40">
-      {/* Subtle dark scrim for readability */}
-      <div className="pointer-events-none absolute inset-0 bg-black/30" />
-
+      {/* Gradient mesh — local light source for this section */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: [
+            "radial-gradient(ellipse 80% 60% at 50% 50%, oklch(0.546 0.245 262.881 / 5%) 0%, transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 85% 85%, oklch(0.424 0.199 265.638 / 4%) 0%, transparent 55%)",
+          ].join(", "),
+        }}
+      />
+      {/* Top fade — match Hero's bottom edge */}
+      <div className="pointer-events-none absolute top-0 right-0 left-0 h-48 bg-linear-to-b from-[oklch(0.145_0_0)] to-transparent" />
+      {/* Bottom fade — match Projects' top edge */}
+      <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-48 bg-linear-to-t from-[oklch(0.145_0_0)] to-transparent" />
       <div className="relative z-10 mx-auto w-full max-w-6xl px-8">
         {/* Heading */}
         <h2

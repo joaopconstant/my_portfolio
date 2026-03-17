@@ -139,12 +139,12 @@ export function Projects() {
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
         style={{ opacity: 0.5 }}
       />
-      {/* Fade in from top (blending with About's bottom fade) */}
-      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-transparent to-[oklch(0.145_0_0)]" />
       {/* Subtle dark scrim for readability */}
       <div className="pointer-events-none absolute inset-0 bg-black/30" />
       {/* Bottom fade — merge into page background */}
       <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-48 bg-linear-to-t from-[oklch(0.145_0_0)] to-transparent" />
+      {/* Fade in from top — rendered last so it covers the scrim at the edge */}
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-transparent to-[oklch(0.145_0_0)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-8">
         {/* Heading */}

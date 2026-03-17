@@ -33,10 +33,10 @@ export function Contact() {
           filter: "blur(60px)",
         }}
       />
-      {/* Fade in from top (blending with About's bottom fade) */}
-      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-transparent to-[oklch(0.145_0_0)]" />
       {/* Dark overlay for readability */}
       <div className="pointer-events-none absolute inset-0 bg-black/20" />
+      {/* Fade in from top — rendered last so it covers the scrim at the edge */}
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-transparent to-[oklch(0.145_0_0)]" />
 
       <div className="relative mx-auto max-w-2xl text-center">
         {/* Heading */}
