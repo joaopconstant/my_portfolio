@@ -138,7 +138,7 @@ export function Projects() {
   const addRef = useScrollReveal(0.08)
 
   return (
-    <section id="work" className="relative h-screen overflow-hidden py-40">
+    <section id="work" className="relative h-auto py-24 lg:py-40">
       {/* Background image — vertically flipped */}
       <img
         src={bgProjects}

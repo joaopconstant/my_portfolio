@@ -37,7 +37,7 @@ export function Navbar() {
             size="sm"
             asChild
             className={cn(
-              "h-8 rounded-full px-3.5 text-sm font-medium transition-colors duration-300",
+              "h-8 rounded-full px-2.5 sm:px-3.5 text-xs sm:text-sm font-medium transition-colors duration-300",
               scrolled
                 ? "text-white/55 hover:bg-white/8 hover:text-white"
                 : "text-white/70 hover:bg-white/10 hover:text-white"

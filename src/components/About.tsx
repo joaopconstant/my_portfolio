@@ -79,7 +79,7 @@ export function About() {
   const addRef = useScrollReveal(0.08)
 
   return (
-    <section id="about" className="relative h-screen overflow-hidden py-40">
+    <section id="about" className="relative h-auto py-24 lg:py-40">
       {/* Gradient mesh — local light source for this section */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -195,7 +195,7 @@ export function About() {
                   <p className="mb-4 text-xs font-medium tracking-widest text-white/25 uppercase">
                     Connect
                   </p>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {socialLinks.map((social) => (
                       <a
                         key={social.name}

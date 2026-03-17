@@ -39,7 +39,7 @@ export function Footer() {
             "linear-gradient(to bottom, oklch(0.546 0.245 262.881 / 12%) 0%, transparent 40%)",
         }}
       />
-      <div className="relative mx-auto flex max-w-6xl items-center justify-between">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row sm:gap-0">
         {/* Left — name + copyright */}
         <p className="text-sm text-white/25">
           © {new Date().getFullYear()} Constant
