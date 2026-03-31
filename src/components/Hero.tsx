@@ -44,7 +44,7 @@ export function Hero() {
             className="reveal mb-8 h-auto gap-2.5 rounded-full border-[rgba(255,255,255,0.12)] px-4 py-1.5 text-xs font-medium tracking-widest text-white/60 uppercase backdrop-blur-md [background:rgba(255,255,255,0.07)] hover:[background:rgba(255,255,255,0.07)]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary/70" />
-            Front-End Engineer
+            Full Stack Engineer
           </Badge>
 
           {/* Name */}
@@ -68,8 +68,8 @@ export function Hero() {
             className="reveal mb-10 max-w-sm text-lg leading-relaxed text-white/45"
             data-reveal-delay="2"
           >
-            I design and build modern web interfaces, from pixel-precise UI to
-            scalable front-end architecture.
+            I build scalable full-stack applications with a focus on clean
+            architecture, high-performance UI, and seamless user experiences.
           </p>
 
           {/* CTAs */}

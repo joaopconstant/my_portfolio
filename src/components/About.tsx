@@ -8,7 +8,9 @@ const stack = [
   "TypeScript",
   "Tailwind CSS",
   "Node.js",
+  "Prisma ORM",
   "REST APIs",
+  "Redux",
 ]
 
 function TiltCard({ children }: { children: React.ReactNode }) {
@@ -121,8 +123,9 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="2"
               >
-                Hi, my name is João Constant. I’m a front-end engineer from Brazil with 2+ years of experience building
-                production web applications with React, Next.js and TypeScript.
+                Hi, my name is João Constant. I’m a full-stack engineer from
+                Brazil with 2+ years of experience building production web applications
+                used daily by thousands of users.
               </p>
 
               <p
@@ -130,8 +133,9 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="3"
               >
-                I focus on creating clean, reliable interfaces that translate
-                complex product requirements into clear user experiences.
+                Experienced in owning complete features end-to-end — from UI
+                implementation and complex user flows to REST API integration
+                and database modeling.
               </p>
 
               <p
@@ -139,10 +143,10 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="4"
               >
-                While my main work is on the front end, I regularly collaborate
-                with back-end engineers and work with APIs, Node.js services,
-                and application data flows to deliver complete features to
-                production.
+                Currently, I lead the full-stack development of an internal CRM
+                system at Avizz, independently responsible for architecture,
+                data modeling, and delivery using Next.js, Prisma, shadcn/ui,
+                and Tailwind CSS.
               </p>
             </div>
           </div>

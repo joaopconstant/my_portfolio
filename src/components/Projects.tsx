@@ -8,24 +8,24 @@ const projects = [
   {
     title: "Budget Manager",
     description:
-      "A personal finance management system featuring real-time income and expense tracking with automated reporting via Google Sheets integration.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Sheets2Api"],
+      "Personal finance dashboard featuring Google OAuth, category-based analytics, and data persistence via Google Sheets. Built with a focus on clean architecture and predictable state management.",
+    tags: ["React", "TypeScript", "Redux", "Google OAuth", "Sheets2API"],
     href: "https://budget-manager-coral.vercel.app",
     year: "2025",
   },
   {
     title: "MRX Rodas e Rodízios",
     description:
-      "A high-performance institutional website for an industrial supplier, featuring a comprehensive product catalog and optimized lead generation.",
-    tags: ["Vite", "TypeScript", "Tailwind"],
+      "Complete institutional website for an industrial solutions company, owning the front-end from layout to production deployment and Vercel integration.",
+    tags: ["Vite", "React", "TypeScript", "Tailwind"],
     href: "https://mrxrodaserodizios.com.br/",
     year: "2025",
   },
   {
-    title: "Hoodlife",
+    title: "Hoodlife Los Santos",
     description:
-      "A premium institutional platform for an exclusive gaming community, featuring high-performance visuals and seamless social integration.",
-    tags: ["Vite", "TypeScript", "Tailwind"],
+      "Institutional platform for an online gaming community with 1,000+ active players, focusing on high-performance visuals and responsive architecture.",
+    tags: ["Vite", "React", "TypeScript", "Tailwind"],
     href: "https://hoodlife.com.br/",
     year: "2026",
   },
