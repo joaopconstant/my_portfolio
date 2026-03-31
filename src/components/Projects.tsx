@@ -1,7 +1,7 @@
 import bgProjects from "@/assets/bg-projects.png"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Github } from "lucide-react"
 import { useScrollReveal, useTiltCard } from "@/lib/hooks"
 
 const projects = [
@@ -11,6 +11,7 @@ const projects = [
       "Personal finance dashboard featuring Google OAuth, category-based analytics, and data persistence via Google Sheets. Built with a focus on clean architecture and predictable state management.",
     tags: ["React", "TypeScript", "Redux", "Google OAuth", "Sheets2API"],
     href: "https://budget-manager-coral.vercel.app",
+    github: "https://github.com/joaopconstant/budget_manager",
     year: "2025",
   },
   {
@@ -19,6 +20,7 @@ const projects = [
       "Complete institutional website for an industrial solutions company, owning the front-end from layout to production deployment and Vercel integration.",
     tags: ["Vite", "React", "TypeScript", "Tailwind"],
     href: "https://mrxrodaserodizios.com.br/",
+    github: "https://github.com/joaopconstant/website_mrx",
     year: "2025",
   },
   {
@@ -117,18 +119,34 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           ))}
         </div>
 
-        {/* Link */}
-        <Button
-          variant="ghost"
-          size="sm"
-          asChild
-          className="group w-fit gap-1.5 rounded-full px-0 text-white/40 hover:bg-transparent hover:text-white/80"
-        >
-          <a href={project.href} target="_blank" rel="noopener noreferrer">
-            View Project
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </Button>
+        {/* Links */}
+        <div className="flex gap-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            asChild
+            className="group w-fit gap-1.5 rounded-full px-0 text-white/40 hover:bg-transparent hover:text-white/80"
+          >
+            <a href={project.href} target="_blank" rel="noopener noreferrer">
+              View Project
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </Button>
+
+          {project.github && (
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="group w-fit gap-1.5 rounded-full px-0 text-white/40 hover:bg-transparent hover:text-white/80"
+            >
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                Source Code
+                <Github className="h-3.5 w-3.5 transition-transform group-hover:scale-110" />
+              </a>
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   )
