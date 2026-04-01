@@ -20,7 +20,6 @@ const projects = [
       "Complete institutional website for an industrial solutions company, owning the front-end from layout to production deployment and Vercel integration.",
     tags: ["Vite", "React", "TypeScript", "Tailwind"],
     href: "https://mrxrodaserodizios.com.br/",
-    github: "https://github.com/joaopconstant/website_mrx",
     year: "2025",
   },
   {
