@@ -28,6 +28,7 @@ const projects = [
       "Institutional platform for an online gaming community with 1,000+ active players, focusing on high-performance visuals and responsive architecture.",
     tags: ["Vite", "React", "TypeScript", "Tailwind"],
     href: "https://hoodlife.com.br/",
+    github: "https://github.com/joaopconstant/hoodlife_lp",
     year: "2026",
   },
 ]
