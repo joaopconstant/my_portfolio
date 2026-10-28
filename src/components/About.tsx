@@ -3,14 +3,16 @@ import { Github, Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react"
 import { useScrollReveal, useTiltCard } from "@/lib/hooks"
 
 const stack = [
+  "TypeScript",
   "React",
   "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
   "Node.js",
+  "PostgreSQL",
   "Prisma ORM",
-  "REST APIs",
+  "tRPC",
   "Redux",
+  "Tailwind CSS",
+  "shadcn/ui",
 ]
 
 function TiltCard({ children }: { children: React.ReactNode }) {
@@ -110,7 +112,7 @@ export function About() {
             maxWidth: "22ch",
           }}
         >
-          Architecting digital products with precision and purpose.
+          I build software that teams rely on every day.
         </h2>
 
         {/* Two-column layout */}
@@ -123,9 +125,9 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="2"
               >
-                Hi, my name is João Constant. I’m a full-stack developer from
-                Brazil with 2+ years of experience building production web applications
-                used daily by thousands of users.
+                Hi, I’m João Constant, a full stack developer from Brazil. For
+                the past two years I’ve been building software that thousands of
+                people use every day.
               </p>
 
               <p
@@ -133,9 +135,8 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="3"
               >
-                Experienced in owning complete features end-to-end — from UI
-                implementation and complex user flows to REST API integration
-                and database modeling.
+                I usually take a feature from start to finish, from the database
+                and the API to the interface and the deploy.
               </p>
 
               <p
@@ -143,16 +144,24 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="4"
               >
-                Currently, I lead the full-stack development of an internal CRM
-                system at Avizz, independently responsible for architecture,
-                data modeling, and delivery using Next.js, Prisma, shadcn/ui,
-                and Tailwind CSS.
+                At Avizz, a payments company, I’m building our internal CRM from
+                scratch and working on the POS platform, which has more than
+                2,300 daily active users.
+              </p>
+
+              <p
+                ref={addRef(5)}
+                className="reveal text-lg leading-relaxed text-white/50"
+                data-reveal-delay="5"
+              >
+                I’m also doing a postgraduate degree in Software Engineering
+                with Applied AI, where I study LLMs, AI agents and MCP.
               </p>
             </div>
           </div>
 
           {/* Right: Tilt card */}
-          <div ref={addRef(5)} className="reveal" data-reveal-delay="3">
+          <div ref={addRef(6)} className="reveal" data-reveal-delay="3">
             <TiltCard>
               <div className="space-y-7 p-7">
                 {/* Experience stat */}
@@ -167,8 +176,7 @@ export function About() {
                     2+ Years
                   </p>
                   <p className="mt-0.5 text-sm text-white/35">
-                    Building and shipping production web applications used by
-                    real users.
+                    Full stack developer at Avizz since March 2024.
                   </p>
                 </div>
 

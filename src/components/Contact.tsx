@@ -53,7 +53,7 @@ export function Contact() {
         >
           Let's build something
           <br />
-          <span className="text-blue-700">beautiful.</span>
+          <span className="text-blue-700">valuable.</span>
         </h2>
 
         {/* Subtext */}
@@ -62,8 +62,8 @@ export function Contact() {
           className="reveal mb-12 text-base leading-relaxed text-white/40"
           data-reveal-delay="2"
         >
-          Whether it's a new product, a complex interface, or an idea that
-          needs a technical partner, I'm open to the conversation.
+          I’m open to remote full-time roles, in Brazil or abroad, and to
+          freelance projects.
         </p>
 
         {/* CTA card */}

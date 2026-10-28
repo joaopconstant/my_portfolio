@@ -68,8 +68,8 @@ export function Hero() {
             className="reveal mb-10 max-w-sm text-lg leading-relaxed text-white/45"
             data-reveal-delay="2"
           >
-            I build scalable full-stack applications with a focus on clean
-            architecture, high-performance UI, and seamless user experiences.
+            I build web apps with TypeScript, React and Node.js, from the
+            database to the interface.
           </p>
 
           {/* CTAs */}

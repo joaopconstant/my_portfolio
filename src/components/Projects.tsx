@@ -6,10 +6,19 @@ import { useScrollReveal, useTiltCard } from "@/lib/hooks"
 
 const projects = [
   {
+    title: "Hoodlife Los Santos",
+    description:
+      "A FiveM (GTA V) roleplay server I founded, now with over 2,000 active players. I take care of the gameplay scripts, the website, the Discord bots and the server itself.",
+    tags: ["React", "TypeScript", "Tailwind", "Lua", "discord.js"],
+    href: "https://hoodlife.com.br/",
+    github: "https://github.com/joaopconstant/hoodlife_lp",
+    year: "2026",
+  },
+  {
     title: "Budget Manager",
     description:
-      "Personal finance dashboard featuring Google OAuth, category-based analytics, and data persistence via Google Sheets. Built with a focus on clean architecture and predictable state management.",
-    tags: ["React", "TypeScript", "Redux", "Google OAuth", "Sheets2API"],
+      "A personal finance dashboard. You sign in with Google, filter and group expenses by category, and everything is saved to Google Sheets.",
+    tags: ["React", "TypeScript", "Redux", "shadcn/ui", "Google OAuth"],
     href: "https://budget-manager-coral.vercel.app",
     github: "https://github.com/joaopconstant/budget_manager",
     year: "2025",
@@ -17,19 +26,10 @@ const projects = [
   {
     title: "MRX Rodas e Rodízios",
     description:
-      "Complete institutional website for an industrial solutions company, owning the front-end from layout to production deployment and Vercel integration.",
+      "Website for a company that sells industrial wheels and casters. I built it from the layout to the deploy, with care for mobile, speed and SEO.",
     tags: ["Vite", "React", "TypeScript", "Tailwind"],
     href: "https://mrxrodaserodizios.com.br/",
     year: "2025",
-  },
-  {
-    title: "Hoodlife Los Santos",
-    description:
-      "Institutional platform for an online gaming community with 1,000+ active players, focusing on high-performance visuals and responsive architecture.",
-    tags: ["Vite", "React", "TypeScript", "Tailwind"],
-    href: "https://hoodlife.com.br/",
-    github: "https://github.com/joaopconstant/hoodlife_lp",
-    year: "2026",
   },
 ]
 
@@ -185,7 +185,7 @@ export function Projects() {
               maxWidth: "20ch",
             }}
           >
-            Projects built to ship and built to last.
+            Some of the things I’ve built.
           </h2>
         </div>
 
