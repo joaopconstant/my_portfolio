@@ -123,7 +123,7 @@ export function About() {
                 className="reveal text-lg leading-relaxed text-white/50"
                 data-reveal-delay="2"
               >
-                Hi, my name is João Constant. I’m a full-stack engineer from
+                Hi, my name is João Constant. I’m a full-stack developer from
                 Brazil with 2+ years of experience building production web applications
                 used daily by thousands of users.
               </p>
